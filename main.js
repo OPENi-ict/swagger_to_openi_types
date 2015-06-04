@@ -100,6 +100,9 @@ var typeTranslator = function(swagger_type, swagger_name){
    case "boolean":
       return "boolean"
       break
+   case "float":
+      return "float"
+      break
    case "date":
       return "date"
       break
