@@ -114,7 +114,7 @@ var typeTranslator = function(swagger_type, swagger_name){
          return typeId
       }
       else{
-         console.log("Could not fnd related", swagger_type, swagger_name)
+         console.log("Could not find related", swagger_type, swagger_name)
       }
       return "string"
       break
@@ -239,7 +239,7 @@ var processEndpoint = function(endpointData, callback){
          continue
       }
 
-      var model_name  = model
+      var model_name  = model.replace("_post", "")
       var model_value = endpointData.models[model]
 
       var host_root = swagger.split('/')[0] + "//" +  swagger.split('/')[2]
